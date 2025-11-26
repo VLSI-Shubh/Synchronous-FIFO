@@ -35,34 +35,34 @@ This project implements a **synchronous FIFO** buffer in Verilog. FIFO memory st
 ---
 
 ## Repository Structure
-
 project_root/
 │
-├── src/ # RTL design files
-│ ├── fifo.v
-│ └── ...
+├── src/                         # RTL design files
+│   ├── fifo.v
+│   └── ...
 │
-├── tb/ # Pure Verilog functional testbenches
-│ ├── fifo_tb.v
-│ └── ...
+├── tb/                          # Pure Verilog functional testbenches
+│   ├── fifo_tb.v
+│   └── ...
 │
-├── sim/ # Cocotb + pyuvm verification environment
-│ ├── Makefile
-│ ├── test_fifo_smoke.py
-│ ├── test_fifo_uvm.py
-│ ├── uvm_env/
-│ │ ├── fifo_item.py
-│ │ ├── fifo_driver.py
-│ │ ├── fifo_monitor.py
-│ │ ├── fifo_sequences.py
-│ │ ├── fifo_scoreboard.py
-│ │ ├── fifo_agent.py
-│ │ ├── fifo_env.py
-│ │ └── fifo_tests.py
-│ ├── sim_build/ # Verilator output (auto-generated)
-│ └── pycache/ # Python cache files
+├── sim/                         # Cocotb + pyuvm verification environment
+│   ├── Makefile
+│   ├── test_fifo_smoke.py
+│   ├── test_fifo_uvm.py
+│   ├── uvm_env/
+│   │     ├── fifo_item.py
+│   │     ├── fifo_driver.py
+│   │     ├── fifo_monitor.py
+│   │     ├── fifo_sequences.py
+│   │     ├── fifo_scoreboard.py
+│   │     ├── fifo_agent.py
+│   │     ├── fifo_env.py
+│   │     └── fifo_tests.py
+│   │
+│   ├── sim_build/               # Verilator output (auto-generated)
+│   └── __pycache__/             # Python cache files
 │
-├── run_sim.sh # Script for running RTL and UVM simulations (updated version below)
+├── run_sim.sh                   # Script for running RTL and UVM simulations
 │
 └── README.md
 
