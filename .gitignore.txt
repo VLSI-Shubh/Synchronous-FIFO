@@ -1,0 +1,13 @@
+# Ignore Verilator generated C++ files and build outputs
+sim_build/
+*.o
+*.d
+*.exe
+*.so
+*.dll
+*.dSYM/
+*.log
+*.vlt
+*.cpp
+*.h
+*.hh
