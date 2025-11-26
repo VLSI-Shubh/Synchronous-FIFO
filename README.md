@@ -41,11 +41,9 @@ project_root/
 │
 ├── src/                         # RTL design files
 │   ├── fifo.v
-│   └── ...
 │
 ├── tb/                          # Pure Verilog functional testbenches
 │   ├── fifo_tb.v
-│   └── ...
 │
 ├── sim/                         # Cocotb + pyuvm verification environment
 │   ├── Makefile
@@ -229,6 +227,7 @@ The next step is to implement an **asynchronous FIFO**, which allows reliable da
 ## License
 
 Open for educational and personal use under the [MIT License](License.txt)
+
 
 
 
