@@ -66,7 +66,7 @@ module fifo #(
                 data_out <= fifo[rd_ptr[ptr_depth-1:0]];
                 rd_ptr <= rd_ptr +1'b1; // dont forget  to increment the pointer
             end else begin
-               data_out <= 'bz; 
+               data_out <= 0; 
             end
         end
     end
