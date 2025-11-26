@@ -35,7 +35,8 @@ This project implements a **synchronous FIFO** buffer in Verilog. FIFO memory st
 ---
 
 ## Repository Structure
-tree
+
+```
 project_root/
 │
 ├── src/                         # RTL design files
@@ -66,7 +67,8 @@ project_root/
 ├── run_sim.sh                   # Script for running RTL and UVM simulations
 │
 └── README.md
-undefined
+```
+
 ---
 
 ## 🧪 Output Waveform
@@ -227,6 +229,7 @@ The next step is to implement an **asynchronous FIFO**, which allows reliable da
 ## License
 
 Open for educational and personal use under the [MIT License](License.txt)
+
 
 
 
