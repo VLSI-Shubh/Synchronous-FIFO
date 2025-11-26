@@ -1,16 +1,38 @@
 #!/bin/bash
 
-# Compile the Verilog design and testbench
-echo "Compiling Verilog files..."
+# Unified simulation script for RTL + UVM (Cocotb + Verilator)
 
-iverilog -o fifo_sim fifo.v fifo_tb.v
+MODE=$1
 
-# Run the simulation
-echo "Running simulation..."
+if [ "$MODE" = "rtl" ]; then
+    echo "----------------------------------------"
+    echo " Running RTL Functional Simulation"
+    echo "----------------------------------------"
 
-vvp fifo_sim
+    mkdir -p build
 
-# Open the waveform with GTKWave
-echo "Launching GTKWave..."
+    iverilog -o build/fifo_sim \
+        src/fifo.v \
+        tb/fifo_tb.v
 
-gtkwave fifo_tb.vcd
+    vvp build/fifo_sim
+    echo "Simulation complete."
+
+    if [ -f fifo_tb.vcd ]; then
+        echo "Opening waveform..."
+        gtkwave fifo_tb.vcd &
+    fi
+
+elif [ "$MODE" = "uvm" ]; then
+    echo "----------------------------------------"
+    echo " Running Cocotb + pyuvm Verification"
+    echo "----------------------------------------"
+
+    cd sim
+    make MODULE=test_fifo_uvm
+
+else
+    echo "Usage:"
+    echo "  ./run_sim.sh rtl     # Run simple RTL testbench simulation"
+    echo "  ./run_sim.sh uvm     # Run Cocotb/pyuvm UVM-style verification"
+fi

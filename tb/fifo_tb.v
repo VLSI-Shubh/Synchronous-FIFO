@@ -1,5 +1,5 @@
 `timescale 1ns/1ns
-`include "fifo.v"
+`include "../src/fifo.v"
 
 module fifo_tb;
 
