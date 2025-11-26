@@ -1,5 +1,8 @@
-# Ignore Verilator generated C++ files and build outputs
+# Ignore Verilator generated directories and files
 sim_build/
+obj_dir/
+
+# Ignore common build and Verilator generated files
 *.o
 *.d
 *.exe
