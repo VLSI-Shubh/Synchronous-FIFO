@@ -1,8 +1,8 @@
 <p align="left">
-  <img src="https://img.shields.io/badge/RTL%20Design-Passed-brightgreen" />
-  <img src="https://img.shields.io/badge/Synthesis-Passed-brightgreen" />
+  <img src="https://img.shields.io/badge/RTL%20Design-Completed-brightgreen" />
   <img src="https://img.shields.io/badge/Functional%20Verification-Passed-brightgreen" />
-  <img src="https://img.shields.io/badge/UVM%20Verification-Passed-brightgreen" />
+  <img src="https://img.shields.io/badge/PYUVM%20Verification-Passed-brightgreen" />
+  <img src="https://img.shields.io/badge/Synthesis-Completed-brightgreen" />
 </p>
 
 # Synchronous FIFO (First-In-First-Out) Buffer
